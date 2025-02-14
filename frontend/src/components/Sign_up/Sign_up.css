@@ -1,0 +1,21 @@
+.inputfields {
+  justify-content: center;
+  background-color: skyblue;
+  height: 48vh;
+  width: 40vw;
+  margin-left: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10%;
+  min-width: fit-content;
+}
+.box {
+  width: 250px;
+  height: 35px;
+}
+.btn {
+  height: 35px;
+  width: 100px;
+}

@@ -1,0 +1,38 @@
+.navbar {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: skyblue;
+}
+
+.list1 {
+  width: fit-content;
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Optional: adds some spacing between list items */
+  display: flex;
+
+  margin-left: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+}
+.list2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.two_options {
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
+}
