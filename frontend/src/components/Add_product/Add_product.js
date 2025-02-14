@@ -21,11 +21,14 @@ const Add_product = () => {
 
     // Proceed with API call if no error
     const userId = JSON.parse(localStorage.getItem("user"))._id;
-    let result = await fetch("http://localhost:5000/add-product", {
-      method: "POST",
-      body: JSON.stringify({ userId, name, price, category, company }),
-      headers: { "Content-Type": "application/json" },
-    });
+    let result = await fetch(
+      "https://dashboard-project-air6.onrender.com/add-product",
+      {
+        method: "POST",
+        body: JSON.stringify({ userId, name, price, category, company }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     console.log(userId);
     result = await result.json();
     console.log(result);

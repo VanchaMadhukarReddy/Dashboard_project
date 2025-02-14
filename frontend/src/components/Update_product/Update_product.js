@@ -16,7 +16,9 @@ const Update_product = () => {
   }, []);
   const getProductDetails = async () => {
     console.log(params.id);
-    let result = await fetch(`http://localhost:5000/product/${params.id}`);
+    let result = await fetch(
+      `https://dashboard-project-air6.onrender.com/product/${params.id}`
+    );
     result = await result.json();
     setName(result.name);
     setPrice(result.price);
@@ -29,11 +31,14 @@ const Update_product = () => {
       setError(true);
       return;
     }
-    let result = await fetch(`http://localhost:5000/update/${params.id}`, {
-      method: "Put",
-      body: JSON.stringify({ name, price, category, company }),
-      headers: { "content-Type": "application/json" },
-    });
+    let result = await fetch(
+      `https://dashboard-project-air6.onrender.com/update/${params.id}`,
+      {
+        method: "Put",
+        body: JSON.stringify({ name, price, category, company }),
+        headers: { "content-Type": "application/json" },
+      }
+    );
     console.log(result);
     console.log({ name, price, category, category });
     setButtonText("product updated");

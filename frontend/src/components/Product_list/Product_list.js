@@ -9,7 +9,9 @@ const Product_list = () => {
   }, []);
 
   const getProducts = async () => {
-    let result = await fetch(`http://localhost:5000/products/${userId}`);
+    let result = await fetch(
+      `https://dashboard-project-air6.onrender.com/${userId}`
+    );
     console.log(userId);
     result = await result.json();
     console.log(result);
@@ -17,9 +19,12 @@ const Product_list = () => {
   };
 
   const deleteproduct = async (id) => {
-    let result = await fetch(`http://localhost:5000/delete/${id}`, {
-      method: "Delete",
-    });
+    let result = await fetch(
+      `https://dashboard-project-air6.onrender.com/delete/${id}`,
+      {
+        method: "Delete",
+      }
+    );
     getProducts();
     console.log(result);
   };
@@ -30,7 +35,9 @@ const Product_list = () => {
     }
     console.warn(event.target.value);
     let key = event.target.value;
-    let result = await fetch(`http://localhost:5000/product/${userId}/${key}`);
+    let result = await fetch(
+      `https://dashboard-project-air6.onrender.com/product/${userId}/${key}`
+    );
     result = await result.json();
     if (result.length > 0) {
       setProducts(result);

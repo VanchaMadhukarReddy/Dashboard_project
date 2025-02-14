@@ -15,11 +15,14 @@ const Signin = () => {
   const collectionData = async () => {
     // alert("check name email and paswd");
     //the result variable will store response from the req send through fetch api function
-    let result = await fetch("http://localhost:5000/login", {
-      method: "post",
-      body: JSON.stringify({ email, password }),
-      headers: { "content-Type": "application/json" }, //this header part is case sensitive any change in the case sensitive will give the error
-    }); //fetch is an api integration method which takes two parameters one is url and other is body,header and all other stuf
+    let result = await fetch(
+      "https://dashboard-project-air6.onrender.com/login",
+      {
+        method: "post",
+        body: JSON.stringify({ email, password }),
+        headers: { "content-Type": "application/json" }, //this header part is case sensitive any change in the case sensitive will give the error
+      }
+    ); //fetch is an api integration method which takes two parameters one is url and other is body,header and all other stuf
     result = await result.json(); //we need to convert the result to json in order to prin the result
     console.log(result);
     if (result.name) {
