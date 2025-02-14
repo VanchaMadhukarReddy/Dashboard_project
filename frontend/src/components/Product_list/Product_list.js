@@ -10,7 +10,7 @@ const Product_list = () => {
 
   const getProducts = async () => {
     let result = await fetch(
-      `https://dashboard-project-air6.onrender.com/${userId}`
+     `https://dashboard-project-air6.onrender.com/products/${userId}`
     );
     console.log(userId);
     result = await result.json();
